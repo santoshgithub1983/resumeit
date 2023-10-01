@@ -24,7 +24,7 @@ app.post("/login" , async(req, res) => {
 
 app.post("/register" , async(req, res) => {
     try{
-      //  console.log("inside server userRoute register call")
+        console.log("inside server userRoute register call")
        const newuser = new User(req.body)
        await newuser.save()
        res.send('Registration Successful')

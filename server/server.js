@@ -8,7 +8,7 @@ const path = require('path')
 
 app.use('/api/user' , userRoute)
 
-if(process.env.NODE_ENV==='production')
+if( process.env.NODE_ENV === 'production')
 {
     app.use('/', express.static("app/build"))
     app.get("*", (req, res) => {

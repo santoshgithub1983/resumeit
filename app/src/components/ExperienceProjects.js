@@ -56,7 +56,8 @@ function ExperienceProjects() {
                         </div>
 
                         <div className="col-md-2">
-                            <MinusCircleOutlined  style={{fontSize:25 , color:'tomato'}} onClick={() => remove(name)} />
+                            <MinusCircleOutlined  style={{fontSize:25 , color:'tomato' }} onClick={() => remove(name)} />
+                            <path style={{backgroundColor:'tomato' }}/>
                         </div>
             </>
                     ))
