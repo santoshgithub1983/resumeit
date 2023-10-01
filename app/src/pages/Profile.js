@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from "react";
+import React , { useState } from "react";
 import DefaultLayout from '../components/DefaultLayout'
 import { Form, Tabs , message , Spin , Button} from 'antd';
 import PersonalInfo from '../components/PersonalInfo';

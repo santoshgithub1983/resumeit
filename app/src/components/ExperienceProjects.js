@@ -1,7 +1,6 @@
 import React from 'react';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import { Button, Form, Input, Space } from 'antd';
-const {Textarea} = Input
+import { Button, Form, Input } from 'antd';
 
 function ExperienceProjects() {
   return (
