@@ -1,0 +1,25 @@
+.box {
+    padding: 0 1.5em 0 1.5em;
+    margin: 0;
+    
+  }
+  .auth-parent {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+  
+  }
+  .auth-parent form {
+    width: 500px;
+    box-shadow: 0 0 3px grey;
+    padding: 20px;
+  }
+  .auth-parent h1{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .auth-parent button{
+   margin-top: 15px;
+  }

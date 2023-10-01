@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@100;200;300&family=Quicksand&family=Roboto&display=swap');
+body {
+  margin: 0;
+  font-family: 'Mooli', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Quicksand', sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+button {
+  background-color: rgb(40, 75, 121) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  color: white !important;
+  width: 150px !important;
+  border-radius: 5px;
+  font: bold !important;
+}
+input , textarea {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 2px solid grey ;
+}
+
+input:focus ,textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid grey !important
+}
+.ant-spin {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.ant-btn-dashed {
+  background-color: white !important;
+  color: black !important;
+  border: 1px dashed green !important;
+  width: 200px !important;
+}
