@@ -8,7 +8,7 @@ const path = require('path')
 
 app.use('/api/user' , userRoute)
 
-if( process.env.NODE_ENV === 'production')
+if ( process.env.NODE_ENV === 'production')
 {
     app.use('/', express.static("app/build"))
     app.get("*", (req, res) => {
@@ -16,5 +16,5 @@ if( process.env.NODE_ENV === 'production')
     })
 }
 
-app.get('/', (req, res) => res.send(`Hi`))
+// app.get('/', (req, res) => res.send('Hi'))
 app.listen(port, () => console.log(`This app is listening on port ${port}!`))
