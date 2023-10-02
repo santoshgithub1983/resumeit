@@ -25,10 +25,10 @@
 
 # Deploy settings
 [[context]]  
-  [[context.production.environment]]
+  [[context.production]]
     MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
 
-  [[context.deploy-preview.environment]]
+  [[context.deploy-preview]]
     MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
   
 # Plugins (optional)
