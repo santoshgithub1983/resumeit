@@ -18,3 +18,5 @@ connection.on('connected', ()=>{
 connection.on('error', (error) =>{
     console.log(error)
 })
+
+module.exports = mongoose

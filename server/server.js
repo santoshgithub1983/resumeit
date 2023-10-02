@@ -11,6 +11,9 @@ app.use('/api/user' , userRoute)
 if ( process.env.NODE_ENV === 'production')
 {
     app.use('/', express.static("app/build"))
+    // Serve static files from the "build" directory
+    app.use(express.static(path.join(__dirname, 'app/build')));
+
     app.get("*", (req, res) => {
         res.sendFile(path.resolve(__dirname , "app/build/index.html"))
     })
