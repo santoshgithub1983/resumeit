@@ -11,7 +11,7 @@ app.use('/api/login' , userRoute)
 app.use('/api/register' , userRoute)
 app.use('/api/update' , userRoute)
 app.use('api/home' , userRoute)
-app.use('api/templates/:id' , userRoute)
+app.use('/templates/:id' , userRoute)
 app.use('api/user/profile' , userRoute)
 
 if ( process.env.NODE_ENV === 'production')
