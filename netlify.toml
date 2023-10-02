@@ -22,13 +22,12 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 # Add any additional configuration here as needed
-
 # Deploy settings
-[[context.production]]
-  MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
-
-[[context.deploy-preview]]
-  MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
+  [context]
+    [context.production]
+    MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
+    [context.deploy-preview]
+    MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
   
 # Plugins (optional)
 # You can enable and configure Netlify plugins here, if needed
