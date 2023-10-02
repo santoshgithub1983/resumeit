@@ -8,9 +8,6 @@
 # Environment variables
 [build.environment]
   NODE_ENV = "production"   # Set NODE_ENV to "production" during the build
-
-# Specify the Node.js version
-[build.environment]
   NODE_VERSION = "18.18.0"       # Use Node.js version 14
 
 # Redirects and rewrites (optional)
@@ -27,13 +24,12 @@
 # Add any additional configuration here as needed
 
 # Deploy settings
-[build.environment]
-  # Environment-specific variables can be set here, e.g., API keys
-[[context.production.environment]]
-  MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
+[[context]]  
+  [[context.production.environment]]
+    MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
 
-[[context.deploy-preview.environment]]
-  MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
+  [[context.deploy-preview.environment]]
+    MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
   
 # Plugins (optional)
 # You can enable and configure Netlify plugins here, if needed
@@ -44,4 +40,4 @@
 # Identity (optional)
 # If you're using Netlify Identity, you can configure it here
 
-# Asset optimization (optional
+# Asset optimization (optional)
