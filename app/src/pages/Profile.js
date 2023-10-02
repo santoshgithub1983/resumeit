@@ -12,7 +12,7 @@ function Profile() {
 
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
-    const user = JSON.parse(localStorage.getItem('smart-resume-user'));
+    const user = JSON.parse(sessionStorage.getItem('resumeit-user'));
     const onFinish= async (values) => {
         setLoading(true);
         try {
@@ -20,7 +20,7 @@ function Profile() {
             const result  = await axios.post("api/user/update" , { ...values, _id : user._id});
             setLoading(false);
             message.success("Profile Updated Successfully");
-            localStorage.setItem('smart-resume-user' , JSON.stringify(result.data))
+            sessionStorage.setItem('resumeit-user' , JSON.stringify(result.data))
         } catch (error){
             setLoading(false);
             message.error('Update Failed');
@@ -50,7 +50,6 @@ function Profile() {
         </div>
     </DefaultLayout>
   )
- 
 }
 
 

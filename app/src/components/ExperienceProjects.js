@@ -1,6 +1,6 @@
 import React from 'react';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input , textarea} from 'antd';
 
 function ExperienceProjects() {
   return (
@@ -63,7 +63,7 @@ function ExperienceProjects() {
                     }
             </div>
             <Form.Item>
-                <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+                <Button className="add-experience-btn" type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
                 Add Experience
                 </Button>
             </Form.Item>
@@ -84,7 +84,7 @@ function ExperienceProjects() {
                             name={[name, 'title']}
                             rules={[{ required: true, message: 'Missing Project Title' }]}
                         >
-                            <Input placeholder="Title" />
+                            <Input placeholder="Title"  />
                         </Form.Item>
                         </div>
 

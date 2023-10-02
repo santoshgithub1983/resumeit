@@ -28,7 +28,7 @@ function Home() {
                                 <img src={template.image} height='500' width='100%' alt="" />
                                 <div className="text" color="white">
                                     <p>{template.title}</p>
-                                    <button onClick={()=>navigate(`/templates/${index+1}`)}>Click to Try</button>
+                                    <button onClick={()=>navigate(`/templates/${index+1}`)}>BUILD YOUR RESUME NOW</button>
                                 </div>
                                 </div>
                             </div>;

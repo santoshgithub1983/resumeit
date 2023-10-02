@@ -2,7 +2,7 @@ import React from 'react'
 import '../../resources/templates.css'
 
 function Template2() {
-    const user = JSON.parse(localStorage.getItem('smart-resume-user'))
+    const user = JSON.parse(sessionStorage.getItem('resumeit-user'))
     return (
         <div className='template1-parent'>
             <div className="top d-flex flex-column">

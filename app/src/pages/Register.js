@@ -22,7 +22,7 @@ function Register() {
     };
 
     useEffect(()=>{
-        if(localStorage.getItem('smart-resume-user'))
+        if(sessionStorage.getItem('resumeit-user'))
         {
             navigate('/home')
         }
@@ -31,6 +31,19 @@ function Register() {
     return (
         <div className="auth-parent">
         {loading && (<Spin size="large"/>)}
+        <div className="banner">
+            <img src="app/src/pages/templates/Resume-it-logo.png" alt="Resume-it &copy;" />
+        </div>
+
+        <div className="desc-section container-md">
+        <div className="content desc-content">
+        <h2 className="h2-text"> Take your resume to next level  </h2>
+        <li>CHOOSE YOUR RESUME TEMPLATE</li>
+        <li>SHOW WHAT YOU'RE MADE OF</li>
+        <li>START IMPRESSING EMPLOYERS</li>
+         </div>
+        </div>
+
         <Form layout='vertical' onFinish={onFinish}>
             <h1>Register</h1>
             <hr></hr>
@@ -51,7 +64,12 @@ function Register() {
                 </div>
                 <Button type='primary' htmlType="submit">REGISTER</Button>
         </Form>
+        <div className="page-wrapper"></div>
+        <footer>
+        <p>&copy; 2023 Tech enthusiast. All rights reserved.</p>
+            </footer>
        </div>
+       
     )
 
 }

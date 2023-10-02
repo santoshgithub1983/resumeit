@@ -13,6 +13,9 @@ app.use('/api/update' , userRoute)
 app.use('api/home' , userRoute)
 app.use('/templates/:id' , userRoute)
 app.use('api/user/profile' , userRoute)
+app.use('./Template1' , userRoute)
+app.use('./Template2' , userRoute)
+
 
 if ( process.env.NODE_ENV === 'production')
 {

@@ -6,7 +6,7 @@ import { UserOutlined  } from '@ant-design/icons';
 
 function DefaultLayout(props) {
     const navigate = useNavigate();
-    const user = JSON.parse(localStorage.getItem('smart-resume-user'))
+    const user = JSON.parse(sessionStorage.getItem('resumeit-user'))
     const items = [
         {
           key: '1',
@@ -24,7 +24,7 @@ function DefaultLayout(props) {
           key: '3',
           label: (
             <span  onClick={()=> {
-                localStorage.removeItem('smart-resume-user')
+                sessionStorage.removeItem('resumeit-user')
                 navigate('/login')
             }}>
               Logout
@@ -38,7 +38,7 @@ function DefaultLayout(props) {
             <div className="header">
                 <h1 onClick={()=>navigate('/home')} style={{cursor:'pointer'}}>Resume-it</h1>
                 <Dropdown menu={{items,}}placement="bottomLeft">
-                    <Button icon={<UserOutlined/>}> {user.username}</Button>
+                    <Button icon={<UserOutlined/>}> {user.username} </Button>  
                 </Dropdown>
                     
             </div>
