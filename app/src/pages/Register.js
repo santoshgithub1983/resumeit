@@ -3,6 +3,7 @@ import { Button, Form, Input, message , Spin } from 'antd';
 import '../resources/authentication.css'
 import {Link , useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Cookies from "js-cookie";
 
 
 function Register() {
@@ -22,7 +23,7 @@ function Register() {
     };
 
     useEffect(()=>{
-        if(sessionStorage.getItem('resumeit-user'))
+        if(Cookies.get('resumeit-user'))
         {
             navigate('/home')
         }

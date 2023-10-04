@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Templates from './pages/templates';
+import Cookies from 'js-cookie';
 
 
 
@@ -32,11 +33,15 @@ function App() {
 }
 
 export default App;
+
 export function ProtectedRoute(props){
-  if(sessionStorage.getItem('resumeit-user')) {
-   // HandleSessionTimeOut()
+  if(Cookies.get('resumeit-user')){
+    console.log('inside cookie check condition of App.js ')
+    console.log(Cookies.get('resumeit-user'))
     return props.children
-  } else {
-    return <Navigate to='/login' />
   }
+else {
+  return <Navigate to='/login' />
+}
+    
 }

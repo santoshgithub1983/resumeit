@@ -55,7 +55,7 @@ function ExperienceProjects() {
                         </div>
 
                         <div className="col-md-2">
-                            <MinusCircleOutlined  style={{fontSize:25 , color:'tomato' }} onClick={() => remove(name)} />
+                            <MinusCircleOutlined  style={{fontSize:30 , color:'tomato' }} onClick={() => remove(name)} />
                             <path style={{backgroundColor:'tomato' }}/>
                         </div>
             </>
@@ -110,14 +110,14 @@ function ExperienceProjects() {
 
 
                         <div className="col-md-2">
-                            <MinusCircleOutlined  style={{fontSize:25 , color:'tomato'}} onClick={() => remove(name)} />
+                            <MinusCircleOutlined  style={{fontSize:30 , color:'tomato'}} onClick={() => remove(name)} />
                         </div>
             </>
                     ))
                     }
             </div>
             <Form.Item>
-                <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+                <Button className="add-projects-btn" type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
                 Add Projects
                 </Button>
             </Form.Item>

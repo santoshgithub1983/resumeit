@@ -172,5 +172,9 @@ li {
   padding: 10px; /* Add padding for spacing inside the div */
   font-size: 50px; /* Adjust font size as needed */
   color: #c5ceb5; /* Text color */
-
+  overflow: hidden;
+}
+.banner img {
+ 
+  height: auto !important;
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import '../../resources/templates.css'
+import Cookies from 'js-cookie';
 
 function Template2() {
-    const user = JSON.parse(sessionStorage.getItem('resumeit-user'))
+    const user = JSON.parse(Cookies.get('resumeit-user'))
     return (
         <div className='template1-parent'>
             <div className="top d-flex flex-column">

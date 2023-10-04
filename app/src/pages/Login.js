@@ -3,6 +3,7 @@ import { Button, Form , Input , message , Spin} from 'antd';
 import '../resources/authentication.css'
 import {Link, useNavigate} from 'react-router-dom'
 import axios from 'axios'
+import Cookies from "js-cookie";
 
 function Login() {
     const [loading, setLoading] = useState(false)
@@ -13,7 +14,8 @@ function Login() {
         try {
             const user  = await axios.post('api/user/login' , values)
             message.success('Login Successful')
-            sessionStorage.setItem('resumeit-user', JSON.stringify(user.data))
+            //sessionStorage.setItem('resumeit-user', JSON.stringify(user.data))
+            Cookies.set('resumeit-user', JSON.stringify(user.data))
             setLoading(false)
             navigate('/')           
         } catch (error){
@@ -23,7 +25,7 @@ function Login() {
     };
 
   useEffect(()=>{
-    if(sessionStorage.getItem('resumeit-user'))
+    if(Cookies.get('resumeit-user'))
     {
         navigate('/home')
     }
@@ -33,7 +35,9 @@ function Login() {
         <div className="auth-parent">
         {loading && (<Spin size="large"/>)}
         <div className="banner">
-            <img src="src/pages/templates/Resume-it-logo.png" alt="Resume-it &copy;" />
+            <img 
+                src={`${process.env.PUBLIC_URL}/Resume-it-logo.png`} 
+                alt="Resume-it &copy;" />
         </div>
 
         <div className="desc-section container-md">

@@ -1,18 +1,21 @@
-import React , { useState } from "react";
+import React , { useState , useEffect } from "react";
 import DefaultLayout from '../components/DefaultLayout'
 import { Form, Tabs , message , Spin , Button} from 'antd';
 import PersonalInfo from '../components/PersonalInfo';
 import SkillsEducation from '../components/SkillsEducation';
 import ExperienceProjects from '../components/ExperienceProjects';
-import {useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
+import Cookie from "js-cookie";
+import Cookies from 'js-cookie';
 
 const { TabPane } = Tabs;
 function Profile() {
 
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
-    const user = JSON.parse(sessionStorage.getItem('resumeit-user'));
+    //const user = JSON.parse(sessionStorage.getItem('resumeit-user'));
+    const user = JSON.parse(Cookies.get('resumeit-user'))
     const onFinish= async (values) => {
         setLoading(true);
         try {
@@ -20,7 +23,9 @@ function Profile() {
             const result  = await axios.post("api/user/update" , { ...values, _id : user._id});
             setLoading(false);
             message.success("Profile Updated Successfully");
-            sessionStorage.setItem('resumeit-user' , JSON.stringify(result.data))
+           // sessionStorage.setItem('resumeit-user' , JSON.stringify(result.data))
+            Cookies.set('resumeit-user' , JSON.stringify(result.data))    // save data to cookie
+            console.log(Cookie.get('resumeit-user'))
         } catch (error){
             setLoading(false);
             message.error('Update Failed');
@@ -35,7 +40,7 @@ function Profile() {
         <hr></hr>
         <Form layout='vertical' onFinish={onFinish} initialValues={user}>
             <Tabs defaultActiveKey="1">
-                <TabPane tab="Personal Info" key="1">
+                <TabPane tab="Personal Info" key="1" >
                     <PersonalInfo/>
                 </TabPane>
                 <TabPane tab="Skills & Education" key="2">

@@ -56,14 +56,14 @@ function SkillsEducation() {
                         </div>
 
                         <div className="col-md-2">
-                            <MinusCircleOutlined  style={{fontSize:25 , color:'tomato'}} onClick={() => remove(name)} />
+                            <MinusCircleOutlined  style={{fontSize:30 , color:'tomato'}} onClick={() => remove(name)} />
                         </div>
             </>
                     ))
                     }
             </div>
             <Form.Item>
-                <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+                <Button className="add-education-btn" type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
                 Add Education
                 </Button>
             </Form.Item>
@@ -99,14 +99,14 @@ function SkillsEducation() {
                         </div>
 
                         <div className="col-md-2">
-                            <MinusCircleOutlined  style={{fontSize:25 , color:'tomato'}} onClick={() => remove(name)} />
+                            <MinusCircleOutlined  style={{fontSize:30 , color:'tomato'}} onClick={() => remove(name)} />
                         </div>
             </>
                     ))
                     }
             </div>
             <Form.Item>
-                <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+                <Button className="add-skills-btn"  type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
                 Add Skills
                 </Button>
             </Form.Item>

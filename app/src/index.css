@@ -51,4 +51,38 @@ input:focus ,textarea:focus {
   border: 1px dashed green !important;
   width: 200px !important;
 }
-
+body {
+  /*  background-color: rgb(222, 229, 238) !important;
+  background: linear-gradient(-45deg, #ebe9e6, #2f6999); */
+  background: radial-gradient(circle, #40a7cf, #9da3b8);
+  /* background: linear-gradient(to right, #dbe6e9, #c2d4d8), linear-gradient(to bottom, #dddbe6, #e0eee0);  */
+}
+input {
+  background-color: gainsboro !important;
+}
+textarea {
+  background-color: gainsboro !important;
+}
+button {
+  background-color: rgb(37, 88, 40) !important;
+}
+.add-experience-btn {
+  background-color: rgb(92, 90, 100) !important;
+  color: rgb(231, 235, 217) !important;
+  font-weight: 600;
+}
+.add-projects-btn {
+  background-color: rgb(92, 90, 100) !important;
+  color: rgb(231, 235, 217) !important;
+  font-weight: 600;
+}
+.add-skills-btn {
+  background-color: rgb(92, 90, 100) !important;
+  color: rgb(231, 235, 217) !important;
+  font-weight: 600;
+}
+.add-education-btn {
+  background-color: rgb(92, 90, 100) !important;
+  color: rgb(231, 235, 217) !important;
+  font-weight: 600;
+}
