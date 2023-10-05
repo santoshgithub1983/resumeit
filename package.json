@@ -13,7 +13,7 @@
     "client-build": "npm run build --prefix app",
     "start": "node server.js",
     "start-client": "npm start --prefix app",
-    "dev": "concurrently \"npm run server\" \"npm run start-client\""
+    "dev": "concurrently \"npm run client-build\"  \"npm run server\" \"npm run start-client\""
     
   },
   "author": "Santosh Pandhare",
