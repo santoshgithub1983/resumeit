@@ -6,6 +6,7 @@ const port = process.env.PORT || 5000
 const userRoute  = require('./routes/userRoute')
 const path = require('path')
 
+
 app.use('/api/user' , userRoute)
 /* app.use('/api/login' , userRoute)
 app.use('/api/register' , userRoute)
@@ -17,6 +18,7 @@ app.use('./Template1' , userRoute)
 app.use('./Template2' , userRoute)
  */
 
+    
 if ( process.env.NODE_ENV === 'production')
 {
    // app.use('/', express.static("app/build"))
