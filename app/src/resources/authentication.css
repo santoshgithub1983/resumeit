@@ -176,5 +176,10 @@ li {
 }
 .banner img {
  
-  height: auto !important;
+  height: 50px !important;
+}
+.ant-form {
+ 
+  border-color: #5281a5 !important;
+ 
 }

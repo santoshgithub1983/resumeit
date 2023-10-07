@@ -25,9 +25,9 @@ function Profile() {
             setLoading(false);
             message.success("Profile Updated Successfully");
            // sessionStorage.setItem('resumeit-user' , JSON.stringify(result.data))
-            console.log(result.data)
+           // console.log(result.data)
             Cookies.set('resumeit-user' , JSON.stringify(result.data))    // save data to cookie
-            console.log(Cookie.get('resumeit-user'))
+          //  console.log(Cookie.get('resumeit-user'))
         } catch (error){
             setLoading(false);
             message.error('Update Failed');

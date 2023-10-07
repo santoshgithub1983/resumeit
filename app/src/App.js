@@ -40,7 +40,7 @@ export function ProtectedRoute(props){
   if(Cookies.get('resumeit-user')){
     console.log('inside cookie check condition of App.js ')
     const userDataString = Cookies.get('resumeit-user');
-    console.log(userDataString)
+    // console.log(userDataString)
     return props.children
   }
 else {
