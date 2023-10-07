@@ -8,12 +8,9 @@
     "npm": "9.8.1"
   },
   "scripts": {
-    "client-install": "npm install --prefix app",
-    "server": "nodemon server/server.js",
-    "client-build": "npm run build --prefix app",
-    "start": "node server.js",
-    "start-client": "npm start --prefix app",
-    "dev": "concurrently \"npm run server\" \"npm run start-client\""
+    "install-all": "cd app && npm install && cd ../server && npm install",
+    "start-all": "concurrently \"npm --prefix app start\" \"npm --prefix server start\"",
+    "build-all": "npm --prefix app run build && npm --prefix server  start" 
   },
   "author": "Santosh Pandhare",
   "license": "ISC",
@@ -21,9 +18,14 @@
     "antd": "^5.9.4",
     "axios": "^1.5.1",
     "body-parser": "^1.20.2",
+    "concurrently": "^8.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "http-proxy": "^1.18.1",
     "js-cookie": "^3.0.5",
     "mongoose": "^7.5.3",
+    "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -31,8 +33,6 @@
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.1",
-    "fkill": "^8.1.1",
-    "nodemon": "^3.0.1"
+    "@types/fkill": "^5.3.1"
   }
 }

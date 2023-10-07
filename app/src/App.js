@@ -35,9 +35,12 @@ function App() {
 export default App;
 
 export function ProtectedRoute(props){
+  // const userDataString = Cookies.get('resumeit-user');
+  // const user = JSON.parse(userDataString);
   if(Cookies.get('resumeit-user')){
     console.log('inside cookie check condition of App.js ')
-    console.log(Cookies.get('resumeit-user'))
+    const userDataString = Cookies.get('resumeit-user');
+    console.log(userDataString)
     return props.children
   }
 else {

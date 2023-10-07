@@ -13,7 +13,7 @@ function Register() {
         console.log(values)
         setLoading(true)
         try {
-            await axios.post('api/user/register' , values)
+            await axios.post(`${process.env.REACT_APP_API_URL}/register` , values)
             message.success('Registration Successful')
             setLoading(false)
         } catch (error){
@@ -33,7 +33,9 @@ function Register() {
         <div className="auth-parent">
         {loading && (<Spin size="large"/>)}
         <div className="banner">
-            <img src="app/src/pages/templates/Resume-it-logo.png" alt="Resume-it &copy;" />
+            <img 
+                src={`${process.env.PUBLIC_URL}/Resume-it-logo.png`} 
+                alt="Resume-it &copy;" />
         </div>
 
         <div className="desc-section container-md">

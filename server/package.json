@@ -1,22 +1,19 @@
 {
   "name": "resume-it",
   "version": "1.0.0",
-  "description": "Build Resume with different templates",
+  "description": "Backend",
   "main": "index.js",
   "engines": {
     "node": "18.18.0",
     "npm": "9.8.1"
   },
   "scripts": {
-    "client-install": "npm install --prefix app",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix app",
-    "dev": "concurrently \"npm run server\" \"npm run app\"",
     "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix app && npm run build --prefix app"
+    "dev": "nodemon server.js"
   },
   "author": "Santosh Pandhare",
   "license": "ISC",
+
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",

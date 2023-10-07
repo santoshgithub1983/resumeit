@@ -20,4 +20,9 @@ connection.on('error', (error) =>{
     console.log(error)
 })
 
+// Define API routes for user authentication, data retrieval, etc.
+//app.use('/api/login', require('./routes/userRoute'));
+
+// Add more routes as needed
+
 module.exports = mongoose

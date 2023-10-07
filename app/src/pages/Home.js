@@ -17,7 +17,7 @@ function Home() {
         title: 'Highlighted Sections Resume',
         image:template2img,
         }
-] 
+    ] 
     return (
         <DefaultLayout>
             <div className="row home">

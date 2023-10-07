@@ -7,7 +7,8 @@ import Cookies from "js-cookie";
 
 function DefaultLayout(props) {
     const navigate = useNavigate();
-    const user = JSON.parse(Cookies.get('resumeit-user'))
+    const userDataString = Cookies.get('resumeit-user');
+    const user = JSON.parse(userDataString);
     const items = [
         {
           key: '1',

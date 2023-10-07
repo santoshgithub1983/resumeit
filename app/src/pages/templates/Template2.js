@@ -3,7 +3,8 @@ import '../../resources/templates.css'
 import Cookies from 'js-cookie';
 
 function Template2() {
-    const user = JSON.parse(Cookies.get('resumeit-user'))
+    const userDataString = Cookies.get('resumeit-user');
+    const user = JSON.parse(userDataString);
     return (
         <div className='template1-parent'>
             <div className="top d-flex flex-column">
