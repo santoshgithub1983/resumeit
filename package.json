@@ -10,7 +10,7 @@
   "scripts": {
     "install-all": "cd app && npm install && cd ../server && npm install",
     "start-all": "concurrently \"npm --prefix app start\" \"npm --prefix server start\"",
-    "build-all": "npm --prefix app run build && npm --prefix server  start" 
+    "build-all": "npm --prefix app run build && npm --prefix server  start"
   },
   "author": "Santosh Pandhare",
   "license": "ISC",
