@@ -12,7 +12,7 @@ function Login() {
         // console.log(values)
         setLoading(true)
         try {
-            const user  = await axios.post( `${process.env.REACT_APP_API_URL}/api/user/login` , values)
+            const user  = await axios.post( '/api/user/login' , values)
             message.success('Login Successful')
             //sessionStorage.setItem('resumeit-user', JSON.stringify(user.data))
             Cookies.set('resumeit-user', JSON.stringify(user.data))
