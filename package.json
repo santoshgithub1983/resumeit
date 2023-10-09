@@ -2,7 +2,6 @@
   "name": "resume-it",
   "version": "1.0.0",
   "description": "Build Resume with different templates",
-  "main": "index.js",
   "engines": {
     "node": "18.18.0",
     "npm": "9.8.1"
