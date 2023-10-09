@@ -38,6 +38,12 @@ app.use('/api/user/register' , userRoute)
 app.use('/api/user/profile' , userRoute)
 app.use('/api/user/update' , userRoute)
 
+app.get("*" , (req , res) => {
+        res.sendFile(path.resolve(__dirname , "app/build/index.html"))
+    // res.sendFile(path.join(__dirname, 'app/build', 'index.html'));
+});
+
+
 //  if ( process.env.NODE_ENV === 'production')
 //  {
 //     app.use('/', express.static("app/build"))
