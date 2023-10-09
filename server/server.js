@@ -28,7 +28,11 @@ const allowedOrigins = [
       res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
       // You can also configure other CORS headers as needed
     }
-  
+    // Set the appropriate headers for OPTIONS requests
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+        // You can also configure other CORS headers as needed
+    }
     // Continue processing the request
     next();
   });
