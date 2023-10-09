@@ -16,27 +16,16 @@ const allowedOrigins = [
     'http://resumeit-santoshgithub1983-santoshgithub1983s-projects.vercel.app',
     'http://resumeit-theta.vercel.app',
     'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app',
+    'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app/api/user/login',
   ];
   
-  // Middleware to set CORS headers
-  app.use((req, res, next) => {
-    const origin = req.get('Origin');
+  const corsOptions = {
+    origin: allowedOrigins,
+    methods: 'GET,POST,PATCH,OPTIONS,PUT',
+    // Additional CORS options if needed
+  };
   
-    // Check if the request's origin is in the allowedOrigins array
-    if (allowedOrigins.includes(origin)) {
-      res.header('Access-Control-Allow-Origin', origin);
-      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-      // You can also configure other CORS headers as needed
-    }
-     // Set the appropriate headers for OPTIONS requests
-        if (req.method === 'OPTIONS') {
-            res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-            // You can also configure other CORS headers as needed
-        }
-    // Continue processing the request
-    next();
-  });
-  
+app.use(cors(corsOptions));  
 
 // Serve static assets (React app) from the 'app/build' directory
 app.use(express.static(path.join(__dirname, 'app/build')));
