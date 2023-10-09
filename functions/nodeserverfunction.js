@@ -9,7 +9,7 @@ const path = require('path')
 
 // Enable CORS for all routes
 app.use(cors());
-
+console.log("Inside nodeserverfunction")
 // Define an array of allowed origins
 const allowedOrigins = [
     'https://resumeit-santoshgithub1983s-projects.vercel.app',
