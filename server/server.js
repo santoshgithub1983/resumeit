@@ -16,10 +16,9 @@ const allowedOrigins = [
     'http://resumeit-santoshgithub1983-santoshgithub1983s-projects.vercel.app',
     'http://resumeit-theta.vercel.app',
     'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app',
-    'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app/api/user/login',
   ];
   
-  // Middleware to enable CORS for allowed origins
+  // Middleware to set CORS headers
   app.use((req, res, next) => {
     const origin = req.get('Origin');
   
@@ -30,6 +29,7 @@ const allowedOrigins = [
       // You can also configure other CORS headers as needed
     }
   
+    // Continue processing the request
     next();
   });
   
