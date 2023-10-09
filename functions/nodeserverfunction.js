@@ -19,6 +19,9 @@ app.use((req, res, next) => {
     next();
   });
 
+// Serve static assets (React app) from the 'app/build' directory
+app.use(express.static(path.join(__dirname, 'app/build')));
+
 app.use('/' , userRoute)
 app.use('/api/user' , userRoute)
 app.use('/api/login' , userRoute)
