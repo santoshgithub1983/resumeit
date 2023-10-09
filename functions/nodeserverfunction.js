@@ -10,16 +10,28 @@ const path = require('path')
 // Enable CORS for all routes
 app.use(cors());
 
-// Enable CORS for a specific origin
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://resumeit-santoshgithub1983s-projects.vercel.app');
-    // You can also configure other CORS headers as needed
-    res.header('Access-Control-Allow-Origin', 'http://resumeit-santoshgithub1983-santoshgithub1983s-projects.vercel.app');
-    res.header('Access-Control-Allow-Origin', 'http://resumeit-theta.vercel.app');
-    res.header('Access-Control-Allow-Origin', 'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+// Define an array of allowed origins
+const allowedOrigins = [
+    'https://resumeit-santoshgithub1983s-projects.vercel.app',
+    'http://resumeit-santoshgithub1983-santoshgithub1983s-projects.vercel.app',
+    'http://resumeit-theta.vercel.app',
+    'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app',
+  ];
+  
+  // Middleware to enable CORS for allowed origins
+  app.use((req, res, next) => {
+    const origin = req.get('Origin');
+  
+    // Check if the request's origin is in the allowedOrigins array
+    if (allowedOrigins.includes(origin)) {
+      res.header('Access-Control-Allow-Origin', origin);
+      res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+      // You can also configure other CORS headers as needed
+    }
+  
     next();
   });
+  
 
 // Serve static assets (React app) from the 'app/build' directory
 app.use(express.static(path.join(__dirname, 'app/build')));
