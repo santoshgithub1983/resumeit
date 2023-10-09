@@ -17,6 +17,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'http://resumeit-santoshgithub1983-santoshgithub1983s-projects.vercel.app');
     res.header('Access-Control-Allow-Origin', 'http://resumeit-theta.vercel.app');
     res.header('Access-Control-Allow-Origin', 'https://resumeit-p7eeegmv6-santoshgithub1983s-projects.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     next();
   });
 
