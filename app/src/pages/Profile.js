@@ -4,10 +4,11 @@ import { Form, Tabs , message , Spin , Button} from 'antd';
 import PersonalInfo from '../components/PersonalInfo';
 import SkillsEducation from '../components/SkillsEducation';
 import ExperienceProjects from '../components/ExperienceProjects';
-// import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Cookie from "js-cookie";
 import Cookies from 'js-cookie';
+
 
 const { TabPane } = Tabs;
 function Profile() {
@@ -20,8 +21,8 @@ function Profile() {
     const onFinish= async (values) => {
         setLoading(true);
         try {
-            console.log('inside try block of update api...')
-            const result  = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/update` , { ...values, _id : user._id});
+            // console.log('inside try block of update api...')
+            const result  = await axios.post(`/.netlify/functions/nodeserverfn_profile` , { ...values, _id : user._id, withCredentials: false});
             setLoading(false);
             message.success("Profile Updated Successfully");
            // sessionStorage.setItem('resumeit-user' , JSON.stringify(result.data))

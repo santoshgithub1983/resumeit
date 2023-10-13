@@ -2,14 +2,14 @@
   "name": "resume-it",
   "version": "1.0.0",
   "description": "Build Resume with different templates",
-  "engines": {
-    "node": "18.18.0",
-    "npm": "9.8.1"
-  },
   "scripts": {
     "install-all": "cd app && npm install && cd ../server && npm install",
     "start-all": "concurrently \"npm --prefix app start\" \"npm --prefix server start\"",
-    "build-all": "npm --prefix app run build && npm --prefix server  start"
+    "build-all": "npm --prefix app run build && npm --prefix server  start",
+    "start": "react-scripts start --prefix app",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "Santosh Pandhare",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "http-proxy": "^1.18.1",
+    "http-proxy-middleware": "^2.0.6",
     "js-cookie": "^3.0.5",
     "mongoose": "^7.5.3",
     "nodemon": "^3.0.1",
@@ -29,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "^5.0.1",
+    "serverless-http": "^3.2.0",
     "web-vitals": "^3.5.0"
   },
   "devDependencies": {

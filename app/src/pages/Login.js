@@ -1,5 +1,5 @@
 import React , {useEffect, useState} from "react";
-import { Button, Form , Input , message , Spin} from 'antd';
+import { Button, Form , Input , message , Spin } from 'antd';
 import '../resources/authentication.css'
 import {Link, useNavigate} from 'react-router-dom'
 import axios from 'axios'
@@ -8,12 +8,12 @@ import Cookies from "js-cookie";
 function Login() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
+
     const onFinish= async(values)=>{
         // console.log(values)
         setLoading(true)
         try {
-            console.log(`Url from env file is : ${process.env.REACT_APP_API_URL}`)
-            const user  = await axios.post( `${process.env.REACT_APP_API_URL}/api/user/login` , values)
+            const user  = await axios.post(`/.netlify/functions/nodeserverfn_login` , (values))
             message.success('Login Successful')
             //sessionStorage.setItem('resumeit-user', JSON.stringify(user.data))
             Cookies.set('resumeit-user', JSON.stringify(user.data))
@@ -67,9 +67,6 @@ function Login() {
         <footer>
         <p>&copy; 2023 Tech enthusiast. All rights reserved.</p>
             </footer>
-
-       
-     
        </div>
     )
 }

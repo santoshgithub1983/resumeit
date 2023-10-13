@@ -1,41 +1,13 @@
-# netlify.toml
-
-# Build settings
-[build]
-  command = "npm run build --prefix app" # The build command for your project
-  publish = "app/build"     # The directory containing your built files
-
-# Environment variables
-[build.environment]
-  NODE_ENV = "production"   # Set NODE_ENV to "production" during the build
-  NODE_VERSION = "18.18.0"       # Use Node.js version 14
-
-# Redirects and rewrites (optional)
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/"
+  to = "/.netlify/functions/:splat"
   status = 200
+  force = true
 
-[[headers]]
-  for = "/sw.js"
-    [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+[build]
+  functions = "netlify/functions"  # Path to your serverless functions
+  publish = "app/build"    # Path to your built React app (adjust as needed)
 
-# Add any additional configuration here as needed
-# Deploy settings
-  [context]
-    [context.production]
-    MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
-    [context.deploy-preview]
-    MONGODB_URI = "mongodb+srv://santoshadmin:Ubs%401983@mongocluster0.gs6rdav.mongodb.net/smart-resume-builder"
-  
-# Plugins (optional)
-# You can enable and configure Netlify plugins here, if needed
-
-# Functions (optional)
-# If you're using Netlify Functions, you can configure them here
-
-# Identity (optional)
-# If you're using Netlify Identity, you can configure it here
-
-# Asset optimization (optional)
+[dev]
+  command = "npm start --prefix app"    # Use your specific start command
+  targetPort = 3000      # Port where your React app runs

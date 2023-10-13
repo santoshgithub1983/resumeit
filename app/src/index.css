@@ -30,7 +30,7 @@ input , textarea {
   box-shadow: none !important;
   outline: none !important;
   border: 1px solid grey !important;
-  width: 550px;
+  width: 400px;
 }
 
 input:focus ,textarea:focus {
@@ -52,9 +52,10 @@ input:focus ,textarea:focus {
   width: 200px !important;
 }
 body {
-  /*  background-color: rgb(222, 229, 238) !important;
-  background: linear-gradient(-45deg, #ebe9e6, #2f6999); */
-  background: radial-gradient(circle, #40a7cf, #9da3b8);
+   
+    background: linear-gradient(-45deg, whitesmoke, whitesmoke) !important; 
+ /*  background: radial-gradient(circle, rgb(251, 251, 252), rgb(222, 127, 127)); */
+   background-image: url('../../public/callum-shaw-bcCymEw9ME4-unsplash.jpg'); 
   /* background: linear-gradient(to right, #dbe6e9, #c2d4d8), linear-gradient(to bottom, #dddbe6, #e0eee0);  */
 }
 input {

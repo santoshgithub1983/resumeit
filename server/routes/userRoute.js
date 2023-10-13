@@ -2,7 +2,7 @@ const express = require('express')
 const User = require('../models/userModel')
 const app = express.Router()
 
-app.post("/login" , async(req, res) => {
+ app.post("/login" , async(req, res) => {
     try { 
         console.log("inside server userRoute login call")
         const result = await User.findOne({
@@ -19,18 +19,19 @@ app.post("/login" , async(req, res) => {
     } catch (error){
         res.status(400).json(error)
     }
-});
+}); 
+ 
 
-app.post("/register" , async(req, res) => {
+ app.post("/register" , async(req, res) => {
     try{
-        console.log("inside server userRoute register call")
+       console.log("inside server userRoute register call")
        const newuser = new User(req.body)
        await newuser.save()
        res.send('Registration Successful')
     } catch (error){
         res.status(400).json(error)
     }
-});
+}); 
 
 app.post('/update', async(req, res) => {
     try{
@@ -42,6 +43,5 @@ app.post('/update', async(req, res) => {
         res.status(400).json(error)
     }
 });
-
 
 module.exports = app

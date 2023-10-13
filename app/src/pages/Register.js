@@ -10,10 +10,10 @@ function Register() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const onFinish= async(values)=>{
-        console.log(values)
+        // console.log(values)
         setLoading(true)
         try {
-            await axios.post(`${process.env.REACT_APP_API_URL}/register` , values)
+            await axios.post('/.netlify/functions/nodeserverfn_register' , values)
             message.success('Registration Successful')
             setLoading(false)
         } catch (error){
