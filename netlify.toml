@@ -8,6 +8,9 @@
   functions = "netlify/functions"  # Path to your serverless functions
   publish = "app/build"    # Path to your built React app (adjust as needed)
 
+  [build.environment]
+    CI = "false"
+
 [dev]
   command = "npm start --prefix app"    # Use your specific start command
   targetPort = 3000      # Port where your React app runs
