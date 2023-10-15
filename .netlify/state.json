@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Thane",
+			"country": {
+				"code": "IN",
+				"name": "India"
+			},
+			"subdivision": {
+				"code": "MH",
+				"name": "Maharashtra"
+			},
+			"timezone": "Asia/Kolkata",
+			"latitude": 19.1963,
+			"longitude": 72.9675
+		},
+		"timestamp": 1697380091412
+	}
+}
