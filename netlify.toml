@@ -4,6 +4,12 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "/*"
+  to = "/app/index.html"
+  status = 200
+
+
 [build]
   functions = "netlify/functions"  # Path to your serverless functions
   publish = "app/build"    # Path to your built React app (adjust as needed)
