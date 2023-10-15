@@ -1,20 +1,21 @@
+from = "/"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/app/index.html"
+  status = 200
+
+
 [build]
-  command = "npm run build"  # Replace with your build command
-  publish = "app/build"     # Path to the build output directory
-  functions = "functions"
+  functions = "netlify/functions"  # Path to your serverless functions
+  publish = "app/build"    # Path to your built React app (adjust as needed)
 
-[[headers]]
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"  # Set CORS policy as needed
-
-[[build.plugins]]
-  package = "@netlify/plugin-functions-core"
+  [build.environment]
+    CI = "false"
 
 [dev]
   command = "npm start --prefix app"    # Use your specific start command
   targetPort = 3000      # Port where your React app runs
-  publish = "app/build"       # Path to the build output directory for local develop
-
-[functions]
-  directory = "server/netlify/functions"  # Specify the directory for your serverless functions
