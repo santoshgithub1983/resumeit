@@ -1,0 +1,186 @@
+.box {
+    padding: 0 1.5em 0 1.5em;
+    margin: 0;
+    
+  }
+  .auth-parent {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    border: none !important;
+  }
+  .h2-text .desc-para {
+    font-size: 20px !important;
+    color: #333;
+    margin-bottom: 10px; /* Add some spacing between <p> and <form> */
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .desc-section h2 {
+    display: block;
+    font-size: 42px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .auth-parent form {
+    width: 500px;
+    box-shadow: 0 0 3px grey;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .auth-parent h1{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .auth-parent button{
+   margin-top: 15px;
+  }
+  .form {
+    border-radius: 10px !important;
+  }
+ 
+  .desc-section .content {
+    display: block !important;
+    height: 80% !important;
+    border: 0px !important;
+    margin-top: 2px;
+    border-radius: 0px !important; 
+    box-shadow: none !important;
+    padding: 10px !important;
+  } 
+  .desc-section {
+      margin: 2px 2px 6px !important;
+      box-sizing: border-box !important;
+  }
+
+.auth-parent .desc-section {
+    margin-bottom: 50px !important;
+    display: block !important;
+    border: none !important;
+}
+.desc-section {
+    margin: 50px 30px 60px;
+}
+
+div {
+    display: block;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1.4rem;
+    line-height: 1.42857143;
+    color: #2e2e2e;
+    background-color: #fff;
+    margin: 0;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+html {
+    font-size: 62.5%;
+}
+/* h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+} */
+
+.h2-text {
+    font-size: 4.6rem !important;
+    line-height: 5.4rem !important;
+    margin: 0 0 30px !important;
+    text-align: left !important;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+    padding: 0 !important;
+   /*  box-sizing: border-box !important;
+
+    display: block !important;
+    font-size: 1.5em !important;
+    margin-block-start: 0.83em !important;
+    margin-block-end: 0.83em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important; */
+}
+
+.desc-para {
+  display: block;
+  margin-block-start: 1em !important;
+  margin-block-end: 1em !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 0px !important; 
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 400 !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  font-size: 2.2rem !important;
+  line-height: 3.8rem !important;
+  font-style:italic !important;
+}
+
+.page-wrapper {
+  margin-top: 140px !important;
+  background-color: #5281a5 !important; 
+  color:#5281a5 !important;  
+}
+footer {
+  background-color: #4e4848 !important; /* Replace with your desired background color */
+  color: rgb(182, 213, 223); /* Text color */
+  padding: 10px; /* Padding for spacing */
+  text-align: center; /* Center align text */
+  width: 100%;
+}
+li::before {
+  content: '\2713'; /* Unicode checkmark character */
+  display: inline-block;
+  width: 16px; /* Adjust the size as needed */
+  margin-right: 5px; /* Add spacing between the checkmark and the text */
+}
+li {
+  list-style: none; /* Remove default list bullet */
+  padding-left: 20px; /* Add some left padding for the checkmark */
+  /* background-image: url('checkmark.png');  */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: left center; /* Position the image to the left of the content */
+  background-size: 16px 16px; /* Adjust the size of the checkmark as needed */
+}
+
+.banner {
+  position: fixed; /* Position the div fixed to the viewport */
+  top: 0; /* Place the div at the top of the viewport */
+  width: 100%; /* Set a fixed width for the div */
+  background-color: rgb(41, 76, 122); /* Background color for the div */
+  padding: 10px; /* Add padding for spacing inside the div */
+  font-size: 50px; /* Adjust font size as needed */
+  color: #c5ceb5; /* Text color */
+  overflow: hidden;
+  height: 60px;
+}
+.banner img {
+  height: 40px !important;
+  margin-bottom: 50px;
+}
+.ant-form {
+ 
+  border-color: #5281a5 !important;
+ 
+}

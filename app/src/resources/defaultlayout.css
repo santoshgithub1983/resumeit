@@ -1,0 +1,36 @@
+.layout {
+    height: 100vh;
+    padding: 20px 50px;
+    background-color: whitesmoke
+
+    
+}
+.header {
+    height: 10%;
+    background-color: rgba(40, 75, 121);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header h1{
+    color: rgb(255, 255, 255);
+    font-size: 29px;
+}
+.content {
+    height: 80%;
+    border: 1px solid grey;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px grey;
+    padding: 10px;
+}
+.header button {
+    border: 1px solid white !important;
+    color: whitesmoke !important;
+    font-weight: bold !important;
+    background: none !important;
+
+}
