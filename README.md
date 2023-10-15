@@ -24,7 +24,7 @@ Your app is ready to be deployed!
 
 ### Deployment
 
-We deployed this app to Netlify: [https://resume-it-now.netlify.app/](https://resume-it-now.netlify.app/)
+We deployed this app to Netlify: [https://resume-it-again.netlify.app/](https://resume-it-again.netlify.app/)
 
 ## Steps To work with the App
 
