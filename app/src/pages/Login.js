@@ -34,7 +34,8 @@ axios.defaults.baseURL = '/';
         // console.log(values)
         setLoading(true)
         try {
-            const user  = await axios.post(`/.netlify/functions/nodeserverfn_login` , (values))
+            
+            const user  = await axios.post('/.netlify/functions/nodeserverfn_login' , (values))
             message.success('Login Successful')
             //sessionStorage.setItem('resumeit-user', JSON.stringify(user.data))
             Cookies.set('resumeit-user', JSON.stringify(user.data))
